@@ -10,10 +10,11 @@ var chudeRouter = require('./routers/chude');
 var taikhoanRouter = require('./routers/taikhoan');
 var baivietRouter = require('./routers/baiviet');
 
-var uri = 'mongodb+srv://admin:admin123@cluster0.ci790jr.mongodb.net/trangtin';
-mongoose.connect(uri)
-.then(() => console.log('Đã kết nối thành công tới MongoDB.'))
-.catch(err => console.log(err));
+var uri = "mongodb://admin:admin123@ac-mehl2fb-shard-00-00.ci790jr.mongodb.net:27017,ac-mehl2fb-shard-00-01.ci790jr.mongodb.net:27017,ac-mehl2fb-shard-00-02.ci790jr.mongodb.net:27017/trangtin?ssl=true&replicaSet=atlas-14ilul-shard-0&authSource=admin&retryWrites=true&w=majority";mongoose.connect(uri)
+ .then(() => console.log('Đã kết nối thành công tới MongoDB.'))
+ .catch(err => console.log(err));
+//app.get('/', (req, res) => {
+ //res.send('Trang chủ.');
 
  
 app.set('views', './views');
